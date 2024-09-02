@@ -5,9 +5,11 @@ using UnityEngine;
 public class move : MonoBehaviour
 
 {
+
+
     void Update()
     {
-        transform.Rotate(new Vector3(Input.GetAxis("Horizontal"), -Input.GetAxis("Horizontal"), 0));
+        transform.Rotate(Input.GetAxis("Vertical") / 10, 0, -Input.GetAxis("Horizontal") / 10);
     }
 }
 
