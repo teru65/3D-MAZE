@@ -7,6 +7,7 @@ public class ball : MonoBehaviour
     private float movex;
     private float movey;
     private float movez;
+    public GameObject
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,14 @@ public class ball : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pitfall")
         {
-            GameObject[] objectBArray = GameObject.FindGameObjectsWithTag("maze");
-            foreach (var obj in objectBArray)
-            {
-                obj.SendMessage("retryMessage");
-            }
+            //GameObject[] objectBArray = GameObject.FindGameObjectsWithTag("maze");
+            //foreach (var obj in objectBArray)
+            //{
+            //obj.SendMessage("retryMessage");
+            //}
 
             transform.position = new Vector3(movex, movey, movez);
+
         }
     }
 
