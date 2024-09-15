@@ -4,32 +4,9 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
-    private float movex;
-    private float movey;
-    private float movez;
-    public GameObject
-    // Start is called before the first frame update
-    void Start()
-    {
-        movex = -1;
-        movey = 1.1f;
-        movez = -0.9f;
 
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Pitfall")
-        {
-            //GameObject[] objectBArray = GameObject.FindGameObjectsWithTag("maze");
-            //foreach (var obj in objectBArray)
-            //{
-            //obj.SendMessage("retryMessage");
-            //}
+    static public int fallenflag = 0;
 
-            transform.position = new Vector3(movex, movey, movez);
-
-        }
-    }
 
     // Update is called once per frame
     void Update()
@@ -53,4 +30,13 @@ public class ball : MonoBehaviour
         }
 
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Pitfall")
+        {
+            fallenflag = 1;
+            transform.position = new Vector3(-1f, 1.1f, -0.9f);
+        }
+    }
+
 }
