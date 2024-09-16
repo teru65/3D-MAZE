@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pitfall
   - maze
+  - goal
   layers:
   - Default
   - TransparentFX

@@ -19,10 +19,10 @@ public class move : MonoBehaviour
     {
 
 
-        if (ball.fallenflag > 0)
+        if (ball.Initializationflag > 0)
         {
             gameObject.transform.rotation = _initialRotation; // 回転の初期化
-            ball.fallenflag = 0;
+            ball.Initializationflag = 0;
 
         }
 

@@ -5,7 +5,8 @@ using UnityEngine;
 public class ball : MonoBehaviour
 {
 
-    static public int fallenflag = 0;
+    static public int Initializationflag = 0;
+    static public int goalcount = 0;
 
 
     // Update is called once per frame
@@ -29,13 +30,21 @@ public class ball : MonoBehaviour
             body.WakeUp();
         }
 
+
     }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Pitfall")
         {
-            fallenflag = 1;
+            Initializationflag = 1;
             transform.position = new Vector3(-1f, 1.1f, -0.9f);
+        }
+        else if (collision.gameObject.tag == "goal")
+        {
+            goalcount = goalcount + 1;
+            Initializationflag = 1;
+            transform.position = new Vector3(-1f, 1.1f, -0.9f);
+            Debug.Log(goalcount);
         }
     }
 
