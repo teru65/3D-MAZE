@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4100112696587834294}
   - component: {fileID: 5383074396970688292}
   - component: {fileID: 2498491235112827146}
+  - component: {fileID: 1558097003912908705}
   m_Layer: 0
   m_Name: Pitfall
   m_TagString: Pitfall
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1987415853826563131}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0565, y: 0.492, z: 0.39115}
+  m_LocalPosition: {x: 0.05, y: 0.51, z: 0.39}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1815,3 +1816,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1558097003912908705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987415853826563131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe827bc7da31d4e2f93c2cf6e47915a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

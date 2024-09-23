@@ -29,8 +29,6 @@ public class ball : MonoBehaviour
         {
             body.WakeUp();
         }
-
-
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -45,6 +43,13 @@ public class ball : MonoBehaviour
             Initializationflag = 1;
             transform.position = new Vector3(-1f, 1.1f, -0.9f);
             Debug.Log(goalcount);
+
+            // 受信するオブジェクトを見つけてメッセージを送信
+            GameObject receiver = GameObject.Find("director");
+            if (receiver != null)
+            {
+                receiver.SendMessage("ReceiveMessage"); // 引数なし
+            }
         }
     }
 

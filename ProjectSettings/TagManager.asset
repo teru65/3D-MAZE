@@ -7,6 +7,7 @@ TagManager:
   - Pitfall
   - maze
   - goal
+  - director
   layers:
   - Default
   - TransparentFX

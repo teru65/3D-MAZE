@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pitfall : MonoBehaviour
+public class MessageReceiver : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void ReceiveMessage()
     {
-        transform.parent = GameObject.Find("maze").transform;
+        Debug.Log("Received message without arguments!");
     }
-
-
 }
