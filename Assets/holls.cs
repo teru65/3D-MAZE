@@ -22,17 +22,26 @@ public class Holls : MonoBehaviour
         else if (ball.goalcount == 2)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
-            CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
+            CreatePrefab(new Vector3(0.049f, 0.5f, -0.2f), new Vector3(3f, 3f, 3f));
         }
         else if (ball.goalcount == 3)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
-            CreatePrefab(new Vector3(-0.517f, 0.5f, 0.2f), new Vector3(0.5f, 0.5f, 0.5f));
         }
         else if (ball.goalcount == 4)
         {
-            CreatePrefab(new Vector3(0.049f, 0.5f, -0.2f), new Vector3(3f, 3f, 3f));
+            CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
+            CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
+            CreatePrefab(new Vector3(-0.517f, 0.5f, 0.2f), new Vector3(0.5f, 0.5f, 0.5f));
+        }
+        else if (ball.goalcount == 5)
+        {
+            CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
+            CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
+            CreatePrefab(new Vector3(-0.517f, 0.5f, 0.2f), new Vector3(0.5f, 0.5f, 0.5f));
+            CreatePrefab(new Vector3(0.27f, 0.5f, 0f), new Vector3(1f, 1f, 1f));
+            CreatePrefab(new Vector3(0.15f, 0.5f, -0.4f), new Vector3(1f, 1f, 1f));
         }
     }
 
