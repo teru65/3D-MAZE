@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Jobs;
 
+
 public class Holls : MonoBehaviour
 {
     public GameObject prefab;
@@ -15,27 +16,27 @@ public class Holls : MonoBehaviour
         RemoveAllPrefabs();
 
         // goalcount に応じてプレハブを生成
-        if (ball.goalcount == 1)
+        if (ball.stage == 1)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
         }
-        else if (ball.goalcount == 2)
+        else if (ball.stage == 2)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(0.049f, 0.5f, -0.2f), new Vector3(3f, 3f, 3f));
         }
-        else if (ball.goalcount == 3)
+        else if (ball.stage == 3)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
         }
-        else if (ball.goalcount == 4)
+        else if (ball.stage == 4)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.517f, 0.5f, 0.2f), new Vector3(0.5f, 0.5f, 0.5f));
         }
-        else if (ball.goalcount == 5)
+        else if (ball.stage == 5)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));

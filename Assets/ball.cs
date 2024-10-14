@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ball : MonoBehaviour
 {
 
     static public int Initializationflag = 0;
-    static public int goalcount = 0;
+    static public int stage = 0;
 
 
     // Update is called once per frame
@@ -39,16 +41,23 @@ public class ball : MonoBehaviour
         }
         else if (collision.gameObject.tag == "goal")
         {
-            goalcount = goalcount + 1;
-            Initializationflag = 1;
-            transform.position = new Vector3(-1f, 1.1f, -0.9f);
-            Debug.Log(goalcount);
-
-            // 受信するオブジェクトを見つけてメッセージを送信
-            GameObject receiver = GameObject.Find("director");
-            if (receiver != null)
+            stage = stage + 1;
+            if (stage == 7)
             {
-                receiver.SendMessage("ReceiveMessage"); // 引数なし
+                SceneManager.LoadScene("clear");
+            }
+            else
+            {
+                Initializationflag = 1;
+                transform.position = new Vector3(-1f, 1.1f, -0.9f);
+                Debug.Log(stage);
+
+                // 受信するオブジェクトを見つけてメッセージを送信
+                GameObject receiver = GameObject.Find("director");
+                if (receiver != null)
+                {
+                    receiver.SendMessage("ReceiveMessage"); // 引数なし
+                }
             }
         }
     }
