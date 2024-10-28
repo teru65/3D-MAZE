@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class button : MonoBehaviour
+public class RestartButton : MonoBehaviour
 {
-    public void Change_button()
+    public void OnButtonPressed() // ボタンが押されたときに呼び出されるメソッド
     {
         ballmove.stage = 1;
         SceneManager.LoadScene("game");

@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class ball : MonoBehaviour
+public class ballmove : MonoBehaviour
 {
 
+
     static public int Initializationflag = 0;
-    static public int stage = 0;
+    static public int stage;
 
 
     // Update is called once per frame

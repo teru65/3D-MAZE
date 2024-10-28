@@ -14,10 +14,10 @@ public class move : MonoBehaviour
     // 更新用の関数
     void Update()
     {
-        if (ball.Initializationflag == 1)
+        if (ballmove.Initializationflag == 1)
         {
             gameObject.transform.rotation = _initialRotation; // 回転の初期化
-            ball.Initializationflag = 0;
+            ballmove.Initializationflag = 0;
 
         }
 

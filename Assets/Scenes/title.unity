@@ -403,7 +403,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1268972438}
         m_TargetAssemblyTypeName: button, Assembly-CSharp
-        m_MethodName: change_button
+        m_MethodName: Change_button
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

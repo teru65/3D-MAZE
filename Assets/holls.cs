@@ -16,27 +16,27 @@ public class Holls : MonoBehaviour
         RemoveAllPrefabs();
 
         // goalcount に応じてプレハブを生成
-        if (ball.stage == 1)
+        if (ballmove.stage == 1)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
         }
-        else if (ball.stage == 2)
+        else if (ballmove.stage == 2)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(0.049f, 0.5f, -0.2f), new Vector3(3f, 3f, 3f));
         }
-        else if (ball.stage == 3)
+        else if (ballmove.stage == 3)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
         }
-        else if (ball.stage == 4)
+        else if (ballmove.stage == 4)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.517f, 0.5f, 0.2f), new Vector3(0.5f, 0.5f, 0.5f));
         }
-        else if (ball.stage == 5)
+        else if (ballmove.stage == 5)
         {
             CreatePrefab(new Vector3(0.05f, 0.5f, 0.37f), new Vector3(0.5f, 0.5f, 0.5f));
             CreatePrefab(new Vector3(-0.2f, 0.5f, -0.17f), new Vector3(0.5f, 0.5f, 0.5f));
