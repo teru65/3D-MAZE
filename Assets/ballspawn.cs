@@ -6,40 +6,32 @@ public class ballspawn : MonoBehaviour
 
 {
     public GameObject ballPrefab; // ボールのプレハブ
-    public ballmove ball; // 監視するボールオブジェクト
 
     private bool hasSpawnedStage1 = false; // stage 1用のフラグ
     private bool hasSpawnedStage4 = false; // stage 4用のフラグ
-
-    // 指定した位置にボールを生成するためのフィールド
     public Vector3 spawnPosition; // プレハブを生成する位置
 
     void Update()
     {
-        if (ball != null) // ballがnullでないことを確認
+
+        if (ballmove.stage == 1 && !hasSpawnedStage1)
         {
-            // stageが1のときにボールを生成
-            if (ballmove.stage == 1 && !hasSpawnedStage1)
-            {
-                SpawnBall(spawnPosition); // 指定した位置で生成
-                hasSpawnedStage1 = true;
-                ballmove.stage = 0; // ステージをリセット
-            }
-            // stageが4のときにボールを生成
-            else if (ballmove.stage == 4 && !hasSpawnedStage4)
-            {
-                SpawnBall(spawnPosition); // 指定した位置で生成
-                hasSpawnedStage4 = true;
-                ballmove.stage = 0; // ステージをリセット
-            }
+            Debug.Log("a");
+            SpawnBall(spawnPosition);
+            hasSpawnedStage1 = true;
+        }
+        else if (ballmove.stage == 4 && !hasSpawnedStage4)
+        {
+            SpawnBall(spawnPosition);
+            hasSpawnedStage4 = true;
         }
     }
 
     void SpawnBall(Vector3 position)
     {
-        if (ballPrefab != null) // ballPrefabがnullでないことを確認
+        if (ballPrefab != null)
         {
-            Instantiate(ballPrefab, position, Quaternion.identity); // 指定した位置で生成
+            Instantiate(ballPrefab, position, Quaternion.identity);
         }
         else
         {
